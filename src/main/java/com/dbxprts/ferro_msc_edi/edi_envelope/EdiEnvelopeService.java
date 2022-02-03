@@ -38,8 +38,8 @@ public class EdiEnvelopeService {
     Logger logger = LoggerFactory.getLogger(EdiEnvelopeService.class);
 
     //900000 = 15 mins
-//    @Scheduled(fixedRate = 900000)
-    @EventListener(ApplicationReadyEvent.class)
+    @Scheduled(fixedRate = 900000)
+//    @EventListener(ApplicationReadyEvent.class)
     public void processEdiEnvelopes() {
         try {
             ftpConnectionClient.open();
