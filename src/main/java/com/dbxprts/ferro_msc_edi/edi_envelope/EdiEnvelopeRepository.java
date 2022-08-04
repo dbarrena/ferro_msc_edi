@@ -17,7 +17,7 @@ public interface EdiEnvelopeRepository extends JpaRepository<EdiEnvelope, BigInt
             "FECHA_PROCESADO\n" +
             "FROM D_EDI_ENVELOPES\n" +
             "WHERE ( PROCESADO = '0' OR  PROCESADO IS NULL)\n" +
-            "AND FECHA_CREACION > TRUNC(SYSDATE - 3)" +
+            "AND FECHA_CREACION > TRUNC(SYSDATE - 20)" +
             "AND ID_NAVIERA IN (1014)",
             nativeQuery = true)
     List<EdiEnvelope> getUnprocessedEnvelopes();
